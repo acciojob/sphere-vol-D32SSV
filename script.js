@@ -5,12 +5,11 @@ function volume_sphere() {
 	let vol = (Math.PI *rad*rad*rad*4)/3 ;
 
 	let update = document.getElementById("volume") ;
-	update.value = vol ;  
+	update.value = vol.toFixed(4) ;  
 } 
 
-window.onload = document.getElementById('MyForm').onsubmit = function (event) {
+        document.getElementById('MyForm').onsubmit = function (event) {
             event.preventDefault(); // Prevent form submission
             volume_sphere();
         };
-
 
